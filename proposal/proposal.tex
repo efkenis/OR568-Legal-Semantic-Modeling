@@ -9,9 +9,9 @@
 
 
 \title{Legal Semantic Modeling}
-\date{May 5, 2020}
+\subtitle{Understanding the Structure of Sentences in BVA PTSD Claims Cases}
 
-\author{Harout Boujakjian, Clara Buss, Elizabeth Kenis, Tim Rogers, Ahn Hoang}
+\author{Harout Boujakjian, Clara Buss, Anh Hoang, Elizabeth Kenis, Tim Rogers}
 
 \institute{George Mason University}
 
@@ -24,7 +24,7 @@
   \frametitle{Background}
   \footnotesize
   \begin{itemize}
-  \item Veterans submit tons of appeals each year to BVA regarding PTSD diagnosis.
+  \item Veterans submit tons of appeals each year to BVA (Board of Veterans' Appeals) regarding PTSD diagnosis.
   \item BVA must sift through all of these cases.
   \item Automating argument mining can be very helpful!
   \item Do legal documents have any sort of structure?
@@ -40,14 +40,15 @@
 \begin{frame}
   \frametitle{Data set}
   \begin{itemize}
-  \item Data set contains 20 cases (2,526 sentences in total)
+  \item Data set contains 20 cases (2,526 sentences in total)$^1$
   \item Before preprocessing, the data set only has two columns (sentence, rhetorical role)
   \item Each sentence has labeled rhetorical role by LLT lab
   \item Not your typical ``Big Data'' NLP problem! Falls under multiclass classification.
     \begin{figure}
-    \includegraphics[width=1\linewidth]{sample_data.png}
+      \includegraphics[width=1\linewidth]{sample_data.png}
     \end{figure}
   \end{itemize}
+  \footnotetext[1]{Full data set: https://github.com/vernrwalker/VetClaims-JSON}
 \end{frame}
 
 
@@ -64,26 +65,34 @@
   \end{itemize}
 \end{frame}
 
+\begin{frame}
+  \frametitle{Problem}
+  \begin{itemize}
+    \item Ability to predict rhetorical role for sentences
+    \item This is important because most legal documents follow the same structure.
+    \end{itemize}
+  \end{frame}
+  
+
 
 \begin{frame}
   \frametitle{Preprocessing}
-   \footnotesize
+  \footnotesize
   \begin{itemize}
   \item Remove stop words and convert all words to lower case
   \item In order to create predictors, the sentences must be tokenized into individual words.
-    \item The tokens will then be transformed using Bag of Words or TD-IDF
-      \item This will create the dataframe (or dataframe) of numerical values to run the models on
+  \item The tokens will then be transformed using Bag of Words or TD-IDF
+  \item This will create the dataframe (or dataframe) of numerical values to run the models on
   \end{itemize}
 \end{frame}
 
 \begin{frame}
   \frametitle{Modeling and Metrics}
   \begin{itemize}
-    \item Potential models: regularized logistic regression, neural network, random forest
-      \item Confusion matrix and classification report (precision, recall, F1-score)
+  \item Potential models: regularized logistic regression, neural network, random forest
+  \item Confusion matrix and classification report (precision, recall, F1-score)
   \end{itemize}
-
-  \end{frame}
+\end{frame}
 
 
 \end{document}
