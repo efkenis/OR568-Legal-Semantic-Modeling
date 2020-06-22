@@ -8,4 +8,5 @@
    * Set up a pipeline to vectorize, transform, and run a logistic regression (or classifcation) model. The for loop runs over several regularizer values C to find the one that leads to the highest predictive accuracy on the validation set. You can remove the logistic regression and use a different sklearn model relatively simply.
    * Using the C value determined above, the trained model is used to predict values for the testing set.
    * A confusion matrix and classifcation report is printed out.
-   You could easily replace the logistic regression model in this file with another model from sklearn. This would be a good place to start IMO if you want to get your feet wet with different models.
+   
+You could easily replace the logistic regression model in this file with another model from sklearn. This would be a good place to start IMO if you want to get your feet wet with different models.
