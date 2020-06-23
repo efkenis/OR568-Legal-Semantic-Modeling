@@ -42,13 +42,22 @@
   \begin{itemize}
   \item Data set contains 20 cases (2,526 sentences in total)$^1$
   \item Before preprocessing, the data set only has two columns (sentence, rhetorical role)
-  \item Each sentence has labeled rhetorical role by LLT lab
-  \item Not your typical ``Big Data'' NLP problem! Falls under multiclass classification.
+  \item Each sentence has labeled rhetorical role by LLT lab at Hofstra University.
+  \item Not your typical ``Big Data'' NLP problem! 
     \begin{figure}
       \includegraphics[width=1\linewidth]{sample_data.png}
     \end{figure}
   \end{itemize}
   \footnotetext[1]{Full data set: https://github.com/vernrwalker/VetClaims-JSON}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Problem Statement}
+  \begin{itemize}
+  \item Given a sentence, be able to predict its rhetorical role in a legal document.
+  \item Falls under multiclass classification.
+  \item This is important because most legal documents follow the same structure. Eventually, a trained model will be able to predict the rhetorical role of any sentence pulled from a legal document. Knowing the rhetorical roles of sentences can speed up analysis times for lawyers of veterans in winning appeals cases.
+  \end{itemize}
 \end{frame}
 
 
@@ -65,14 +74,6 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Problem}
-  \begin{itemize}
-    \item Ability to predict rhetorical role for sentences
-    \item This is important because most legal documents follow the same structure.
-    \end{itemize}
-  \end{frame}
-  
 
 
 \begin{frame}
