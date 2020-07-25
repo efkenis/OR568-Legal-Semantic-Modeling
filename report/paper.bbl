@@ -1,0 +1,56 @@
+\begin{thebibliography}{1}
+
+\bibitem{BVAaudit}
+Office of~Inspector~General.
+\newblock Decision ready claims program hindered by ineffective planning.
+\newblock \url{https://www.va.gov/oig/pubs/VAOIG-18-05130-105.pdf}, 2019.
+
+\bibitem{Walker2019AutomaticCO}
+Vern~R. Walker, Krishnan Pillaipakkamnatt, Alexandra~M. Davidson, Marysa
+  Linares, and Domenick~J. Pesce.
+\newblock Automatic classification of rhetorical roles for sentences: Comparing
+  rule-based scripts with machine learning.
+\newblock In {\em ASAIL@ICAIL}, 2019.
+
+\bibitem{Walker2017Semantic}
+Vern~R. Walker, Nneka Okpara, Ashtyn Hemendinger, and Tauseff Ahmed.
+\newblock Semantic types for decomposing evidence assessment in decisions on
+  veterans’ disability claims for ptsd.
+\newblock In {\em ASAIL}, 2017.
+
+\bibitem{LLTdata}
+Vern~R Walker.
+\newblock Vetclaims-json.
+\newblock \url{https://github.com/vernrwalker/VetClaims-JSON}, 2019.
+
+\bibitem{christopherdmanning2008introduction}
+Prabhakar Raghavan，Hinrich~Schütze Christopher D.~Manning.
+\newblock {\em Introduction to Information Retrieval}.
+\newblock Cambridge University Press, 2008.
+
+\bibitem{scikit-learn}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
+  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
+  D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay.
+\newblock Scikit-learn: Machine learning in {P}ython.
+\newblock {\em Journal of Machine Learning Research}, 12:2825--2830, 2011.
+
+\bibitem{tensorflow2015-whitepaper}
+Mart\'{\i}n Abadi, Ashish Agarwal, Paul Barham, Eugene Brevdo, Zhifeng Chen,
+  Craig Citro, Greg~S. Corrado, Andy Davis, Jeffrey Dean, Matthieu Devin,
+  Sanjay Ghemawat, Ian Goodfellow, Andrew Harp, Geoffrey Irving, Michael Isard,
+  Yangqing Jia, Rafal Jozefowicz, Lukasz Kaiser, Manjunath Kudlur, Josh
+  Levenberg, Dandelion Man\'{e}, Rajat Monga, Sherry Moore, Derek Murray, Chris
+  Olah, Mike Schuster, Jonathon Shlens, Benoit Steiner, Ilya Sutskever, Kunal
+  Talwar, Paul Tucker, Vincent Vanhoucke, Vijay Vasudevan, Fernanda Vi\'{e}gas,
+  Oriol Vinyals, Pete Warden, Martin Wattenberg, Martin Wicke, Yuan Yu, and
+  Xiaoqiang Zheng.
+\newblock {TensorFlow}: Large-scale machine learning on heterogeneous systems,
+  2015.
+\newblock Software available from tensorflow.org.
+
+\bibitem{word2vec}
+Tomas Mikolov, Kai Chen, Greg Corrado, and Jeffrey Dean.
+\newblock Efficient estimation of word representations in vector space, 2013.
+
+\end{thebibliography}
