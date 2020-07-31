@@ -1,4 +1,5 @@
-venv
+*venv*
+modVenv
 *.log
 *.nav
 *.out
