@@ -115,8 +115,53 @@ Labeling of sentences is a categorical classification problem. For each of the m
 \end{table}
 \vspace{0.3em}
 
+The second model tested was multinomial Naive Bayes.
 
-The second model tested was a simple neural network using tensorflow and keras in python \cite{tensorflow2015-whitepaper}. The architecture of the neural net included two dense layers with a dropout layer in between. The purpose of the dropout layer, with half of the nodes dropped, is to prevent overfitting. The first dense layer had 512 nodes with a ReLU (rectified linear unit) activation function and is a popular choice for the first layer. It is a simple activation function. The second dense layer had only 6 nodes and a softmax activation function. This is a multinomial version of a logistic regression and is necessary to produce the final vector of probabilites for each sentence. Lastly, the max of the vector of probilities is taken for each sentence and this is the prediction for the class. As with a lot of neural network architecture, the layers were put together using trial and error to determine what worked best. The reason for three layers as opposed to 10+ is to keep the neural network simple and see how well the results compare with the multinomial logistic regression. The number of epochs, an iteration over the whole x and y data provided, used was 8. The batch size, the number of samples used per gradient update, was 64 \cite{tensorflow2015-whitepaper}. The confusion matrix for the neural network is Table \ref{table:NN} and the precison/recall results is in Table \ref{table:prNN}.
+\vspace{1.4em}
+\begin{table}[h]
+  \centering
+  \begin{tabular}{| c| c| c| c| c| c| c|}
+    \hline
+    & \multicolumn{6}{|c|}{\textbf{Actual}} \\
+    \hline
+    \textbf{Predicted} & citation & evidence & finding & legal rule & reasoning & sentence \\
+    \hline
+    citation  & \textbf{68} &    0    &  0     &    0      &        0  &    0 \\ 
+    evidence  &  21   & \textbf{181} &       29   &     8     &       52  &    15  \\
+    finding   &    0   &    0    & \textbf{17}  &    1      &        3  &    2  \\
+    legal rule &    1   &    0    &        4    & \textbf{62} &    2     &    6  \\
+    reasoning &    0   &    2   &        3    &    3    &  \textbf{12} &   1  \\
+    sentence  &    0   &   0    &        0     &    0   &         0     & \textbf{13}\\
+    \hline
+  \end{tabular}
+  \caption{Confusion matrix for multinomial Naive Bayes}
+  \label{table:LR}
+\end{table}
+\vspace{0.3em}
+
+\vspace{1.4em}
+\begin{table}
+  \centering
+  \begin{tabular}{| c | c | c | c | c |}
+    \hline
+    &                   precision  &   recall &  f1-score  &  support \\
+    \hline
+    citation sentence &       1.00 &     0.76 &     0.86 &       90 \\
+    evidence sentence &       0.59 &     0.99 &     0.74 &      183 \\
+    finding sentence &       0.74 &     0.32 &     0.45 &       53 \\
+    legal rule sentence &    0.83 &     0.84 &     0.83 &       74 \\
+    reasoning sentence &       0.57 &     0.17 &     0.27 &       69 \\
+    sentence           &       1.00 &     0.35 &     0.52 &       37 \\
+    \hline
+  \end{tabular}
+  \caption{Precision/Recall table for multinomial Naive Bayes}
+  \label{table:prLR}
+\end{table}
+\vspace{0.3em}
+
+
+
+The third model tested was a simple neural network using tensorflow and keras in python \cite{tensorflow2015-whitepaper}. The architecture of the neural net included two dense layers with a dropout layer in between. The purpose of the dropout layer, with half of the nodes dropped, is to prevent overfitting. The first dense layer had 512 nodes with a ReLU (rectified linear unit) activation function and is a popular choice for the first layer. It is a simple activation function. The second dense layer had only 6 nodes and a softmax activation function. This is a multinomial version of a logistic regression and is necessary to produce the final vector of probabilites for each sentence. Lastly, the max of the vector of probilities is taken for each sentence and this is the prediction for the class. As with a lot of neural network architecture, the layers were put together using trial and error to determine what worked best. The reason for three layers as opposed to 10+ is to keep the neural network simple and see how well the results compare with the multinomial logistic regression. The number of epochs, an iteration over the whole x and y data provided, used was 8. The batch size, the number of samples used per gradient update, was 64 \cite{tensorflow2015-whitepaper}. The confusion matrix for the neural network is Table \ref{table:NN} and the precison/recall results is in Table \ref{table:prNN}.
 
 
 \vspace{1.4em}
